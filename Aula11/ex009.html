@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando sua nacionalidade</title>
+</head>
+<body>
+    <h1>Você é um estrangeiro?</h1>
+    Qual pais voce esta morando? <input type="text" id="pais">
+    <input type="button" id="verificar" value="Verificar">
+    <div id="res">
+
+    </div>
+
+    <script>
+        var v = document.getElementById('verificar')
+        v.addEventListener('click', Verificar)
+
+        function Verificar() {            
+            var pais = window.document.getElementById('pais').value
+            var res = window.document.querySelector('div#res')
+
+            if( pais == 'Brasil') {
+                res.innerHTML = `<p> Você nasceu no Brasil e esta morando em ${pais} então você é um nativo </p>`
+
+            }else {
+                res.innerHTML = `<p> Você nasceu no Brasil e esta morando em ${pais}, então você é um estrangeiro! </p>`            
+             }
+         }
+    </script>
+</body>
+</html>
